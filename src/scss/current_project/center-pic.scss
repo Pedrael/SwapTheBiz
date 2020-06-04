@@ -1,0 +1,9 @@
+$gradient-scaler: 0.92;
+.center-pic {
+  background: linear-gradient(180deg, $background-color 0%, $background-color RelativeUnits(225, $gradient-scaler), #EDF4F9 RelativeUnits(225.00001, $gradient-scaler),  #EDF4F9 100%);
+  position: relative;
+  .img-wrap {
+    @include width(1500, 0.9);
+    max-width: 100vw;
+  }
+}

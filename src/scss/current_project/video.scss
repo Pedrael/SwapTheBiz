@@ -1,0 +1,40 @@
+.video {
+  background: #fff;
+  h3 {
+    display: none;
+    text-align: center;
+    margin-top: 50px;
+  }
+  @include _phone-big {
+    h3 { display: block; }
+    border-radius: 16px;
+    margin-top: -16px;
+    position: relative;
+    z-index: 1;
+  }
+  iframe {
+    margin-top: RelativeUnits(95, 1);
+    @include width(1300, 0.95);
+    height: RelativeUnits(757, 0.95);
+    -webkit-box-shadow: 0px 50px 38px -30px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 50px 38px -30px rgba(0,0,0,0.45);
+    box-shadow: 0px 50px 38px -30px rgba(0,0,0,0.45);
+    @include _phone-big {
+      box-shadow: none !important;
+      margin-top: 50px
+    }
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 230%;
+    @include width(1300, 0.95);
+    margin-top: RelativeUnits(90, 0.9);
+    margin-bottom: RelativeUnits(180, 0.99);
+    @include _phone-big {
+      font-size: 14px;
+      line-height: 200%;
+    }
+  }
+}

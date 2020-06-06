@@ -1,0 +1,89 @@
+.calendar {
+  padding-top: RelativeUnits(90, 1);
+  margin-top: RelativeUnits(190, 1);
+  height: RelativeUnits(1750, 0.7);
+  z-index: 1;
+  position: relative;
+  background: #EDF4F9;
+  p { font-weight: 500; }
+  .title, .calendar-images {
+    @include width(1305, 0.9);
+    max-width: 100vw;
+    h3 { margin-bottom: 20px; }
+  }
+
+  .calendar-images {
+    position: relative;
+    height: RelativeUnits(1300, 0.9);
+    margin-top: 30px;
+    .calendar-wrap, .calendar-cover-wrap, .list-wrap, .contacts-wrap, .top-thing-wrap {
+      position: absolute;
+      max-width: 100vw;
+    }
+    .contacts-wrap, .top-thing-wrap {
+      box-shadow: 0px 39px 73px rgba(1, 51, 72, 0.23);
+    }
+    .calendar-wrap {
+      top: RelativeUnits(316, 0.9);
+      left: RelativeUnits(358, 0.9);
+      @include width(655, 0.9);
+      z-index: 1;
+    }
+    .top-thing-wrap {
+      top: 0;
+      right: 0;
+      @include width(603, 0.9);
+      z-index: 1;
+      border-radius: RelativeUnits(8, 0.9);
+      overflow: hidden;
+    }
+    .calendar-cover-wrap {
+      top: RelativeUnits(46, 0.9);
+      right: RelativeUnits(10, 0.9);
+      border-radius: RelativeUnits(16, 0.9);
+      overflow: hidden;
+      @include width(1218, 0.9);
+    }
+    .contacts-wrap {
+      right: RelativeUnits(10, 0.9);
+      top: RelativeUnits(262, 0.9);
+      @include width(283, 0.9);
+    }
+    .list-wrap {
+      right: RelativeUnits(243, 0.9);
+      top: RelativeUnits(798, 0.9);
+      @include width(754, 0.9);
+    }
+  }
+
+  @include _tablet-small {
+    border-radius: 16px;
+    .title {
+      max-width: 80vw;
+      p {
+        font-weight: 400;
+        text-align: center;
+      }
+      h3 { text-align: center; }
+    }
+
+    .calendar-images {
+      .calendar-cover-wrap { top: 0; left: 0; }
+      .top-thing-wrap { display: none; }
+      .calendar-wrap {
+        top: RelativeUnits(101, 0.9, tablet-small);
+        left: 5%;
+        width: 65vw;
+      }
+      .contacts-wrap {
+        width: 25vw;
+        top: 15vw;
+      }
+      .list-wrap {
+        right: 20vw;
+        bottom: 0;
+        width: 80vw;
+      }
+    }
+  }
+}

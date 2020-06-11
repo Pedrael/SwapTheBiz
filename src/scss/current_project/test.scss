@@ -26,8 +26,18 @@ html, body {
         @include FontLineSize(0.4, 0.4, 0.2, 93, 8);
 				font-weight: 500;
       }
-      h3 {
+      h3:not(.tit) {
         @include FontLineSize(0.3, 0.3, 0.4, 36, 8);
 				font-weight: 600;
       }
 }
+
+.tab-nav, .part-add {
+	a {
+		font-size: 18px;
+		line-height: 22px;
+	}
+}
+
+.about{ .logo { img{ width: auto; }}}
+.nav{ .logo { img{ width: auto; }}}
